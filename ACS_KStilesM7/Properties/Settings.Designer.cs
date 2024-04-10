@@ -8,22 +8,102 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACS_KStilesM7.Properties
-{
-
-
+namespace ACS_KStilesM7.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("69, 111, 116")]
+        public global::System.Drawing.Color mainText {
+            get {
+                return ((global::System.Drawing.Color)(this["mainText"]));
+            }
+            set {
+                this["mainText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("28, 25, 25")]
+        public global::System.Drawing.Color menuStripBackground {
+            get {
+                return ((global::System.Drawing.Color)(this["menuStripBackground"]));
+            }
+            set {
+                this["menuStripBackground"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("211, 203, 189")]
+        public global::System.Drawing.Color menuStripText {
+            get {
+                return ((global::System.Drawing.Color)(this["menuStripText"]));
+            }
+            set {
+                this["menuStripText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("235, 88, 55")]
+        public global::System.Drawing.Color mainBack {
+            get {
+                return ((global::System.Drawing.Color)(this["mainBack"]));
+            }
+            set {
+                this["mainBack"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=3.130.26.194;Initial Catalog=ClothingStoreStilesKSP24;Persist Securit" +
+            "y Info=True;User ID=kstilessp242353;Password=z4dKYwm3G!;Encrypt=True;TrustServer" +
+            "Certificate=True")]
+        public string ClothingStoreStilesKSP24ConnectionString {
+            get {
+                return ((string)(this["ClothingStoreStilesKSP24ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("69, 111, 116")]
+        public global::System.Drawing.Color buttonBack {
+            get {
+                return ((global::System.Drawing.Color)(this["buttonBack"]));
+            }
+            set {
+                this["buttonBack"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("211, 203, 189")]
+        public global::System.Drawing.Color buttonText {
+            get {
+                return ((global::System.Drawing.Color)(this["buttonText"]));
+            }
+            set {
+                this["buttonText"] = value;
             }
         }
     }

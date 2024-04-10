@@ -46,6 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClothingStoreStilesKSP24DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCart.Designer.cs">
+      <DependentUpon>frmCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShop.Designer.cs">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWelcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,22 +77,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCart.resx">
+      <DependentUpon>frmCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShop.resx">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Bhel Puri.ttf" />
+    <None Include="ClothingStoreStilesKSP24DataSet.xsc">
+      <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreStilesKSP24DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreStilesKSP24DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreStilesKSP24DataSet.xss">
+      <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -78,6 +123,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\welcomeImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\backgroundImage.jpg" />
+    <None Include="Properties\Resources\Images\welcomeImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Fonts\" />
+    <Folder Include="bin\Debug\Images\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="Properties\Resources\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
