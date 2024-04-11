@@ -55,12 +55,12 @@
             this.lblWelcomeText.AutoSize = true;
             this.lblWelcomeText.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.lblWelcomeText.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.mainText;
-            this.lblWelcomeText.Location = new System.Drawing.Point(21, 37);
+            this.lblWelcomeText.Location = new System.Drawing.Point(12, 37);
             this.lblWelcomeText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWelcomeText.Name = "lblWelcomeText";
-            this.lblWelcomeText.Size = new System.Drawing.Size(185, 24);
+            this.lblWelcomeText.Size = new System.Drawing.Size(203, 24);
             this.lblWelcomeText.TabIndex = 1;
-            this.lblWelcomeText.Text = "Kade\'s Clothes Shop";
+            this.lblWelcomeText.Text = "Welcome To My Store!";
             // 
             // mnsMenu
             // 
@@ -142,7 +142,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome Form";
+            this.Text = "Kade\'s Clothes Shop";
             this.Load += new System.EventHandler(this.frmWelcome_Load);
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();

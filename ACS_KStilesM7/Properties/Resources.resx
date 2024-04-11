@@ -118,13 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Bhel_Puri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Bhel Puri.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="welcomeImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Images\welcomeImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackJacket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\blackJacket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Images\backgroundImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bhel_Puri" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Bhel Puri.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="blackJeans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\blackJeans.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biegeShirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\biegeShirt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueShirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\blueShirt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brownShirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\brownShirt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="creamCapris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\creamCapris.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greenShorts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\greenShorts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navyJeans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\navyJeans.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orangeHoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\orangeHoodie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pinkShorts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\pinkShorts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purpleJacket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\purpleJacket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redHoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\redHoodie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stripedHoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\stripedHoodie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteJacket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\whiteJacket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellowShorts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Images\yellowShorts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

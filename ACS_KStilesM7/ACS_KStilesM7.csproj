@@ -137,5 +137,50 @@
     <Folder Include="bin\Release\" />
     <Folder Include="Properties\Resources\Fonts\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\blackJacket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\blackJeans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\biegeShirt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\blueShirt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\brownShirt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\creamCapris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\greenShorts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\navyJeans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\orangeHoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\pinkShorts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\purpleJacket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\redHoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\stripedHoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\whiteJacket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Images\yellowShorts.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
