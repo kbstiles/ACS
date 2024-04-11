@@ -106,5 +106,17 @@ namespace ACS_KStilesM7.Properties {
                 this["buttonText"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("28, 25, 25")]
+        public global::System.Drawing.Color secondaryMainText {
+            get {
+                return ((global::System.Drawing.Color)(this["secondaryMainText"]));
+            }
+            set {
+                this["secondaryMainText"] = value;
+            }
+        }
     }
 }

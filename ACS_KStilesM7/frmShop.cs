@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACS_KStilesM7.ClothingStoreStilesKSP24DataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,10 @@ namespace ACS_KStilesM7
 {
     public partial class frmShop : Form
     {
+        public static ProductsTableAdapter _taProducts;
+
+        public static ClothingStoreStilesKSP24DataSet _dsProducts;
+
         public frmShop()
         {
             InitializeComponent();
@@ -20,12 +25,15 @@ namespace ACS_KStilesM7
 
         private void frmShop_Load(object sender, EventArgs e)
         {
+            _taProducts = productsTableAdapter;
+            _dsProducts = clothingStoreStilesKSP24DataSet;
+
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Types' table. You can move, or remove it, as needed.
             this.typesTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Types);
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.PurchaseDetails' table. You can move, or remove it, as needed.
             this.purchaseDetailsTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.PurchaseDetails);
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Products);
+            clsSQL.ProductDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Orders);
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Customers' table. You can move, or remove it, as needed.
@@ -94,7 +102,7 @@ namespace ACS_KStilesM7
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCart_Click(object sender, EventArgs e)

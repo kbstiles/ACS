@@ -28,5 +28,8 @@
     <Setting Name="buttonText" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">211, 203, 189</Value>
     </Setting>
+    <Setting Name="secondaryMainText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">28, 25, 25</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

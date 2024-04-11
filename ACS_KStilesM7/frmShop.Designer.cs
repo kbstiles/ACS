@@ -31,13 +31,21 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShop));
             this.dgvShop = new System.Windows.Forms.DataGridView();
+            this.productUPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyOnHandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clothingStoreStilesKSP24DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clothingStoreStilesKSP24DataSet = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSet();
             this.pbxProductImage = new System.Windows.Forms.PictureBox();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.cbxQuantity = new System.Windows.Forms.ComboBox();
-            this.clothingStoreStilesKSP24DataSet = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSet();
-            this.clothingStoreStilesKSP24DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSetTableAdapters.CustomersTableAdapter();
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,18 +56,10 @@
             this.purchaseDetailsTableAdapter = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSetTableAdapters.PurchaseDetailsTableAdapter();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typesTableAdapter = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSetTableAdapters.TypesTableAdapter();
-            this.productUPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyOnHandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProductImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProductImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -98,6 +98,80 @@
             this.dgvShop.TabIndex = 4;
             this.dgvShop.TabStop = false;
             this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
+            // 
+            // productUPCDataGridViewTextBoxColumn
+            // 
+            this.productUPCDataGridViewTextBoxColumn.DataPropertyName = "ProductUPC";
+            this.productUPCDataGridViewTextBoxColumn.HeaderText = "ProductUPC";
+            this.productUPCDataGridViewTextBoxColumn.Name = "productUPCDataGridViewTextBoxColumn";
+            this.productUPCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productUPCDataGridViewTextBoxColumn.Width = 138;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productNameDataGridViewTextBoxColumn.Width = 151;
+            // 
+            // typeIDDataGridViewTextBoxColumn
+            // 
+            this.typeIDDataGridViewTextBoxColumn.DataPropertyName = "TypeID";
+            this.typeIDDataGridViewTextBoxColumn.HeaderText = "TypeID";
+            this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
+            this.typeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeIDDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // brandDataGridViewTextBoxColumn
+            // 
+            this.brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
+            this.brandDataGridViewTextBoxColumn.HeaderText = "Brand";
+            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
+            this.brandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brandDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sizeDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // imageIDDataGridViewTextBoxColumn
+            // 
+            this.imageIDDataGridViewTextBoxColumn.DataPropertyName = "ImageID";
+            this.imageIDDataGridViewTextBoxColumn.HeaderText = "ImageID";
+            this.imageIDDataGridViewTextBoxColumn.Name = "imageIDDataGridViewTextBoxColumn";
+            this.imageIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.imageIDDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // qtyOnHandDataGridViewTextBoxColumn
+            // 
+            this.qtyOnHandDataGridViewTextBoxColumn.DataPropertyName = "QtyOnHand";
+            this.qtyOnHandDataGridViewTextBoxColumn.HeaderText = "QtyOnHand";
+            this.qtyOnHandDataGridViewTextBoxColumn.Name = "qtyOnHandDataGridViewTextBoxColumn";
+            this.qtyOnHandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qtyOnHandDataGridViewTextBoxColumn.Width = 135;
+            // 
+            // unitPriceDataGridViewTextBoxColumn
+            // 
+            this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice";
+            this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
+            this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
+            this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unitPriceDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // clothingStoreStilesKSP24DataSetBindingSource
+            // 
+            this.clothingStoreStilesKSP24DataSetBindingSource.DataSource = this.clothingStoreStilesKSP24DataSet;
+            this.clothingStoreStilesKSP24DataSetBindingSource.Position = 0;
+            // 
+            // clothingStoreStilesKSP24DataSet
+            // 
+            this.clothingStoreStilesKSP24DataSet.DataSetName = "ClothingStoreStilesKSP24DataSet";
+            this.clothingStoreStilesKSP24DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pbxProductImage
             // 
@@ -169,16 +243,6 @@
             this.cbxQuantity.TabIndex = 0;
             this.cbxQuantity.Text = "Quantity on Hand";
             // 
-            // clothingStoreStilesKSP24DataSet
-            // 
-            this.clothingStoreStilesKSP24DataSet.DataSetName = "ClothingStoreStilesKSP24DataSet";
-            this.clothingStoreStilesKSP24DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clothingStoreStilesKSP24DataSetBindingSource
-            // 
-            this.clothingStoreStilesKSP24DataSetBindingSource.DataSource = this.clothingStoreStilesKSP24DataSet;
-            this.clothingStoreStilesKSP24DataSetBindingSource.Position = 0;
-            // 
             // customersBindingSource
             // 
             this.customersBindingSource.DataMember = "Customers";
@@ -224,70 +288,6 @@
             // 
             this.typesTableAdapter.ClearBeforeFill = true;
             // 
-            // productUPCDataGridViewTextBoxColumn
-            // 
-            this.productUPCDataGridViewTextBoxColumn.DataPropertyName = "ProductUPC";
-            this.productUPCDataGridViewTextBoxColumn.HeaderText = "ProductUPC";
-            this.productUPCDataGridViewTextBoxColumn.Name = "productUPCDataGridViewTextBoxColumn";
-            this.productUPCDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productUPCDataGridViewTextBoxColumn.Width = 138;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productNameDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // typeIDDataGridViewTextBoxColumn
-            // 
-            this.typeIDDataGridViewTextBoxColumn.DataPropertyName = "TypeID";
-            this.typeIDDataGridViewTextBoxColumn.HeaderText = "TypeID";
-            this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
-            this.typeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeIDDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // brandDataGridViewTextBoxColumn
-            // 
-            this.brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
-            this.brandDataGridViewTextBoxColumn.HeaderText = "Brand";
-            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
-            this.brandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // imageIDDataGridViewTextBoxColumn
-            // 
-            this.imageIDDataGridViewTextBoxColumn.DataPropertyName = "ImageID";
-            this.imageIDDataGridViewTextBoxColumn.HeaderText = "ImageID";
-            this.imageIDDataGridViewTextBoxColumn.Name = "imageIDDataGridViewTextBoxColumn";
-            this.imageIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imageIDDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // qtyOnHandDataGridViewTextBoxColumn
-            // 
-            this.qtyOnHandDataGridViewTextBoxColumn.DataPropertyName = "QtyOnHand";
-            this.qtyOnHandDataGridViewTextBoxColumn.HeaderText = "QtyOnHand";
-            this.qtyOnHandDataGridViewTextBoxColumn.Name = "qtyOnHandDataGridViewTextBoxColumn";
-            this.qtyOnHandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtyOnHandDataGridViewTextBoxColumn.Width = 135;
-            // 
-            // unitPriceDataGridViewTextBoxColumn
-            // 
-            this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice";
-            this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
-            this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
-            this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unitPriceDataGridViewTextBoxColumn.Width = 110;
-            // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -312,9 +312,9 @@
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.frmShop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProductImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProductImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
@@ -333,13 +333,10 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.ComboBox cbxQuantity;
         private System.Windows.Forms.BindingSource clothingStoreStilesKSP24DataSetBindingSource;
-        private ClothingStoreStilesKSP24DataSet clothingStoreStilesKSP24DataSet;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private ClothingStoreStilesKSP24DataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
         private System.Windows.Forms.BindingSource ordersBindingSource;
         private ClothingStoreStilesKSP24DataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
-        private System.Windows.Forms.BindingSource productsBindingSource;
-        private ClothingStoreStilesKSP24DataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.BindingSource purchaseDetailsBindingSource;
         private ClothingStoreStilesKSP24DataSetTableAdapters.PurchaseDetailsTableAdapter purchaseDetailsTableAdapter;
         private System.Windows.Forms.BindingSource typesBindingSource;
@@ -352,5 +349,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imageIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyOnHandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitPriceDataGridViewTextBoxColumn;
+        public System.Windows.Forms.BindingSource productsBindingSource;
+        public ClothingStoreStilesKSP24DataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        public ClothingStoreStilesKSP24DataSet clothingStoreStilesKSP24DataSet;
     }
 }

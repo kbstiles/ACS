@@ -16,5 +16,11 @@ namespace ACS_KStilesM7
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmWelcome().Show();
+        }
     }
 }
