@@ -1,5 +1,6 @@
 ﻿using ACS_KStilesM7.ClothingStoreStilesKSP24DataSetTableAdapters;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace ACS_KStilesM7
         public static ProductsTableAdapter _taProducts;
 
         public static ClothingStoreStilesKSP24DataSet _dsProducts;
+
+        private static clsOrderDetails Order;
+
+        public static List<clsOrderDetails> Orders = new List<clsOrderDetails>();        
 
         public frmShop()
         {
@@ -39,7 +44,7 @@ namespace ACS_KStilesM7
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Customers);
 
-
+            
             MessageBox.Show("Database successfully opened.");
             
             dgvShop.AutoGenerateColumns = true;
@@ -102,7 +107,14 @@ namespace ACS_KStilesM7
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            
+            Order = new clsOrderDetails(
+                    Convert.ToInt32(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[0].Value),
+                    Convert.ToString(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[1].Value),
+                    Convert.ToDecimal(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[7].Value),
+                    Convert.ToInt32(cbxQuantity.SelectedItem)
+            );
+
+            Orders.Add(Order);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
@@ -115,6 +127,11 @@ namespace ACS_KStilesM7
         {
             this.Hide();
             new frmWelcome().Show();
+        }
+
+        private void frmShop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

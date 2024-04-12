@@ -53,8 +53,8 @@
             // lblWelcomeText
             // 
             this.lblWelcomeText.AutoSize = true;
-            this.lblWelcomeText.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.lblWelcomeText.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.mainText;
+            this.lblWelcomeText.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "secondaryMainText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.lblWelcomeText.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.secondaryMainText;
             this.lblWelcomeText.Location = new System.Drawing.Point(12, 37);
             this.lblWelcomeText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWelcomeText.Name = "lblWelcomeText";
@@ -88,7 +88,7 @@
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
@@ -105,21 +105,21 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // aoutToolStripMenuItem
             // 
             this.aoutToolStripMenuItem.Name = "aoutToolStripMenuItem";
-            this.aoutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aoutToolStripMenuItem.Text = "About";
             this.aoutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -143,6 +143,7 @@
             this.Name = "frmWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kade\'s Clothes Shop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmWelcome_FormClosing);
             this.Load += new System.EventHandler(this.frmWelcome_Load);
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();

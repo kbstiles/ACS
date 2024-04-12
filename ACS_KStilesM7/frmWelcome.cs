@@ -70,6 +70,11 @@ namespace ACS_KStilesM7
             MessageBox.Show("Database successfully closed.");
 
             Application.Exit();
-        }       
+        }
+
+        private void frmWelcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

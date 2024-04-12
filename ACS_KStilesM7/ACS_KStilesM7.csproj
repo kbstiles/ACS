@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClothingStoreStilesKSP24DataSet.cs">
+      <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClothingStoreStilesKSP24DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="clsOrderDetails.cs" />
     <Compile Include="clsSQL.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>

@@ -22,5 +22,10 @@ namespace ACS_KStilesM7
             this.Hide();
             new frmWelcome().Show();
         }
+
+        private void frmAbout_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

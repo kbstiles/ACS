@@ -310,6 +310,7 @@
             this.Name = "frmShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmShop_FormClosing);
             this.Load += new System.EventHandler(this.frmShop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clothingStoreStilesKSP24DataSetBindingSource)).EndInit();
