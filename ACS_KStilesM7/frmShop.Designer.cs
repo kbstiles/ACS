@@ -98,6 +98,7 @@
             this.dgvShop.TabIndex = 4;
             this.dgvShop.TabStop = false;
             this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
+            this.dgvShop.SelectionChanged += new System.EventHandler(this.dgvShop_SelectionChanged);
             // 
             // productUPCDataGridViewTextBoxColumn
             // 

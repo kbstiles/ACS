@@ -133,5 +133,11 @@ namespace ACS_KStilesM7
         {
             Application.Exit();
         }
+
+        private void dgvShop_SelectionChanged(object sender, EventArgs e)
+        {
+            cbxQuantity.SelectedIndex = -1;
+            cbxQuantity.Text = "Quantity On Hand";
+        }
     }
 }
