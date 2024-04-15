@@ -11,30 +11,30 @@ namespace ACS_KStilesM7
 {
     internal class clsSQL
     {
-        //connection string
-        private const string CONNECT_STRING =
-                @"Server=3.130.26.194;" +
-                "Database=ClothingStoreStilesKSP24;" +
-                "User Id=kstilessp242353;" +
-                "password=z4dKYwm3G!";
+        ////connection string
+        //private const string CONNECT_STRING =
+        //        @"Server=3.130.26.194;" +
+        //        "Database=ClothingStoreStilesKSP24;" +
+        //        "User Id=kstilessp242353;" +
+        //        "password=z4dKYwm3G!";
 
-        //build a connection to the books db
-        private static SqlConnection _cntDatabase = new SqlConnection(CONNECT_STRING);
+        ////build a connection to the books db
+        //private static SqlConnection _cntDatabase = new SqlConnection(CONNECT_STRING);
 
-        //add the command object
-        private static SqlCommand _sqlProductCommand,
-            _sqlOrderCommand,
-            _sqlPurchaseDetailsCommand;
+        ////add the command object
+        //private static SqlCommand _sqlProductCommand,
+        //    _sqlOrderCommand,
+        //    _sqlPurchaseDetailsCommand;
 
-        //data adapter
-        private static SqlDataAdapter _daProduct = new SqlDataAdapter(),
-            _daOrder = new SqlDataAdapter(),
-            _daPurchaseDetails = new SqlDataAdapter();
+        ////data adapter
+        //private static SqlDataAdapter _daProduct = new SqlDataAdapter(),
+        //    _daOrder = new SqlDataAdapter(),
+        //    _daPurchaseDetails = new SqlDataAdapter();
 
-        //data tables
-        private static DataTable _dtProductTable = new DataTable(),
-            _dtOrderTable = new DataTable(),
-            _dtPurchaseDetailsTable = new DataTable();
+        ////data tables
+        //private static DataTable _dtProductTable = new DataTable(),
+        //    _dtOrderTable = new DataTable(),
+        //    _dtPurchaseDetailsTable = new DataTable();
 
         private static StringBuilder errorMessages = new StringBuilder();
 
