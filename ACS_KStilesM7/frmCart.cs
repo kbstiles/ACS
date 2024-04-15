@@ -43,9 +43,15 @@ namespace ACS_KStilesM7
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            frmShop.Orders.RemoveAt(lbxCart.SelectedIndex);
-            lbxCart.Items.RemoveAt(lbxCart.SelectedIndex);
-            PopulateData();
+            if (lbxCart.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an item to remove first.");
+            } else
+            {
+                frmShop.Orders.RemoveAt(lbxCart.SelectedIndex);
+                lbxCart.Items.RemoveAt(lbxCart.SelectedIndex);
+                PopulateData();
+            }            
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)

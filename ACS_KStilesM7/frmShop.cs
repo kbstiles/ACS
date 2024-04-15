@@ -52,6 +52,7 @@ namespace ACS_KStilesM7
 
         private void dgvShop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             cbxQuantity.Items.Clear();
             for (int i = 0; i < Convert.ToInt32(dgvShop.Rows[e.RowIndex].Cells[6].Value) + 1; i++)
             {
@@ -107,14 +108,24 @@ namespace ACS_KStilesM7
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            Order = new clsOrderDetails(
+            if (dgvShop.Rows[dgvShop.CurrentCell.RowIndex] == null)
+            {
+                MessageBox.Show("Select a product first.");
+            } else if (cbxQuantity.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a quanity first.");
+            } else {
+                Order = new clsOrderDetails(
                     Convert.ToInt32(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[0].Value),
                     Convert.ToString(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[1].Value),
                     Convert.ToDecimal(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[7].Value),
                     Convert.ToInt32(cbxQuantity.SelectedItem)
-            );
+                );
 
-            Orders.Add(Order);
+                Orders.Add(Order);
+            }
+
+            
         }
 
         private void btnCart_Click(object sender, EventArgs e)
