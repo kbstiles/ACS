@@ -114,7 +114,7 @@ namespace ACS_KStilesM7
             } else if (cbxQuantity.SelectedIndex == -1)
             {
                 MessageBox.Show("Select a quanity first.");
-            } else {
+            } else {                
                 Order = new clsOrderDetails(
                     Convert.ToInt32(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[0].Value),
                     Convert.ToString(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[1].Value),
@@ -123,6 +123,10 @@ namespace ACS_KStilesM7
                 );
 
                 Orders.Add(Order);
+
+                pbxProductImage.Image = null;
+
+                clsSQL.AddedToCart(Convert.ToInt32(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[0].Value), Convert.ToInt32(cbxQuantity.SelectedItem));
             }
 
             

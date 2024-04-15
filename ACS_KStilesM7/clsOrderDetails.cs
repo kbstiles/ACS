@@ -11,7 +11,8 @@ namespace ACS_KStilesM7
     {
         string productName;
 
-        decimal unitPrice;
+        decimal unitPrice,
+            totalPerLine;
 
         int quantity,
             productUPC;
@@ -54,6 +55,16 @@ namespace ACS_KStilesM7
         public void SetQuantity(int quantity)
         {
             this.quantity = quantity;
+        }
+
+        public decimal GetTotalPerLine()
+        {
+            return totalPerLine;
+        }
+
+        public void SetTotalPerLine(decimal totalPerLine)
+        {
+            this.totalPerLine = totalPerLine;
         }
 
         public clsOrderDetails(int productUPC, string productName, decimal unitPrice, int orderQuantity)

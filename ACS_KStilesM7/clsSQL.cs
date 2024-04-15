@@ -65,11 +65,41 @@ namespace ACS_KStilesM7
             }
         }
 
-        public static void AddedToCart(int productUPC, ComboBox Quantity)
+        public static void AddedToCart(int productUPC, int Quantity)
         {
             try
             {
+                
+                frmShop._taProducts.AddToCart(Quantity, productUPC);
                 frmShop._taProducts.Fill(frmShop._dsProducts.Products);
+            }
+            catch (SqlException ex)
+            {
+                if (ex is SqlException)
+                {
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" +
+                            "Message: " + ex.Errors[i].Message + "\n" +
+                            "Line Number: " + ex.Errors[i].LineNumber + "\n" +
+                            "Source: " + ex.Errors[i].Source + "\n" +
+                            "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    MessageBox.Show(errorMessages.ToString(), "Error on ProductDatabaseCommand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Error on ProductDatabaseCommand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public static void RemovedFromCart(int productUPC, int Quantity)
+        {
+            try
+            {
+
+                frmShop._taProducts.RemovedFromCart(Quantity, productUPC);
             }
             catch (SqlException ex)
             {

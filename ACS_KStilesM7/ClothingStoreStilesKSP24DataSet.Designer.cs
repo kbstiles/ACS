@@ -3319,12 +3319,28 @@ SELECT ProductUPC, ProductName, TypeID, Brand, Size, ImageID, QtyOnHand, UnitPri
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ProductUPC, ProductName, TypeID, Brand, Size, ImageID, QtyOnHand, UnitPric" +
                 "e FROM dbo.Products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "UPDATE Products\r\nSET       QtyOnHand =\r\n                 (SELECT QtyOnHand\r\n     " +
+                "            FROM    Products AS Products_1\r\n                 WHERE (ProductUPC =" +
+                " @ProductUPC)) - @Quantity\r\nWHERE (ProductUPC = @ProductUPC);  ";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "QtyOnHand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductUPC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProductUPC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "UPDATE Products\r\nSET       QtyOnHand =\r\n                 (SELECT QtyOnHand\r\n     " +
+                "            FROM    Products AS Products_1\r\n                 WHERE (ProductUPC =" +
+                " @ProductUPC)) + @Quantity\r\nWHERE (ProductUPC = @ProductUPC);  ";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "QtyOnHand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductUPC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProductUPC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3557,6 +3573,66 @@ SELECT ProductUPC, ProductName, TypeID, Brand, Size, ImageID, QtyOnHand, UnitPri
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string ProductName, int TypeID, string Brand, string Size, int ImageID, int QtyOnHand, decimal UnitPrice, int Original_ProductUPC, string Original_ProductName, int Original_TypeID, string Original_Brand, string Original_Size, int Original_ImageID, int Original_QtyOnHand, decimal Original_UnitPrice) {
             return this.Update(Original_ProductUPC, ProductName, TypeID, Brand, Size, ImageID, QtyOnHand, UnitPrice, Original_ProductUPC, Original_ProductName, Original_TypeID, Original_Brand, Original_Size, Original_ImageID, Original_QtyOnHand, Original_UnitPrice);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int AddToCart(global::System.Nullable<int> Quantity, int ProductUPC) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Quantity.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(Quantity.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[1].Value = ((int)(ProductUPC));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int RemovedFromCart(global::System.Nullable<int> Quantity, int ProductUPC) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((Quantity.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(Quantity.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[1].Value = ((int)(ProductUPC));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

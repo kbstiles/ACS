@@ -14,10 +14,42 @@ namespace ACS_KStilesM7
 {
     public partial class frmCart : Form
     {
-        decimal subTotal,
+        decimal totalPerLine,
+            subTotal,
             taxAmount,
             tax,
             totalDue;
+
+        public decimal GetSubTotal()
+        {
+            return subTotal;
+        }
+
+        public void SetSubTotal(decimal subTotal)
+        {
+            this.subTotal = subTotal;
+        }
+
+        public decimal GetTaxAmount()
+        {
+            return taxAmount;
+        }
+
+        public void SetTaxAmount(decimal taxAmount)
+        {
+            this.taxAmount = taxAmount;
+        }
+
+        public decimal GetTotalDue()
+        {
+            return totalDue;
+        }
+
+        public void SetTotalDue(decimal totalDue)
+        {
+            this.totalDue = totalDue;
+        }        
+
         public frmCart()
         {
             InitializeComponent();
@@ -36,6 +68,10 @@ namespace ACS_KStilesM7
 
         private void btnClearCart_Click(object sender, EventArgs e)
         {
+            foreach (clsOrderDetails order in frmShop.Orders)
+            {
+                clsSQL.RemovedFromCart(order.GetProductUPC(), order.GetQuantity());                
+            }
             frmShop.Orders.Clear();
             lbxCart.Items.Clear();
             PopulateData();
@@ -48,6 +84,7 @@ namespace ACS_KStilesM7
                 MessageBox.Show("Please select an item to remove first.");
             } else
             {
+                clsSQL.RemovedFromCart(frmShop.Orders[lbxCart.SelectedIndex].GetProductUPC(), frmShop.Orders[lbxCart.SelectedIndex].GetQuantity());
                 frmShop.Orders.RemoveAt(lbxCart.SelectedIndex);
                 lbxCart.Items.RemoveAt(lbxCart.SelectedIndex);
                 PopulateData();
@@ -99,6 +136,8 @@ namespace ACS_KStilesM7
                     "\n-----------------------------------------------------------"
                 );
 
+                order.SetTotalPerLine(totalPrice);
+
                 subTotal += totalPrice;
             }
             lbxCart.DrawMode = DrawMode.OwnerDrawVariable;
@@ -106,10 +145,13 @@ namespace ACS_KStilesM7
             lbxCart.DrawItem += lbxCart_DrawItem;
 
             lblSubtotalActual.Text = subTotal.ToString("C", CultureInfo.CurrentCulture);
+            SetSubTotal(subTotal);
             taxAmount = subTotal * tax;
             lblTaxActual.Text = taxAmount.ToString("C", CultureInfo.CurrentCulture);
+            SetTaxAmount(taxAmount);
             totalDue = subTotal + taxAmount;
             lblTotalActual.Text = totalDue.ToString("C", CultureInfo.CurrentCulture);
+            SetTotalDue(totalDue);
         }
     }
 }

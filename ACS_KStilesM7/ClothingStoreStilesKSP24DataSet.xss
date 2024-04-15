@@ -7,13 +7,13 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="60" ViewPortY="60" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Customers" ZOrder="8" X="323" Y="70" Height="177" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="85" />
-    <Shape ID="DesignTable:Orders" ZOrder="7" X="70" Y="70" Height="177" Width="183" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="85" />
-    <Shape ID="DesignTable:Products" ZOrder="1" X="323" Y="274" Height="272" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="180" />
+    <Shape ID="DesignTable:Orders" ZOrder="7" X="70" Y="70" Height="177" Width="183" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="32" OldDataTableHeight="0" SplitterPosition="85" />
+    <Shape ID="DesignTable:Products" ZOrder="2" X="76" Y="309" Height="371" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="250" />
     <Shape ID="DesignTable:PurchaseDetails" ZOrder="6" X="837" Y="70" Height="204" Width="236" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="112" />
-    <Shape ID="DesignTable:Types" ZOrder="5" X="589" Y="274" Height="158" Width="178" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="66" />
+    <Shape ID="DesignTable:Types" ZOrder="1" X="426" Y="313" Height="158" Width="178" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="66" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Orders_Customers" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Orders_Customers" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>323</X>
@@ -25,35 +25,31 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Orders_Products" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Orders_Products" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>323</X>
-          <Y>291</Y>
+          <X>164</X>
+          <Y>309</Y>
         </Point>
         <Point>
-          <X>236</X>
-          <Y>291</Y>
-        </Point>
-        <Point>
-          <X>236</X>
+          <X>164</X>
           <Y>247</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Product_Type" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Product_Type" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>640</X>
-          <Y>432</Y>
+          <X>477</X>
+          <Y>471</Y>
         </Point>
         <Point>
-          <X>640</X>
-          <Y>440</Y>
+          <X>477</X>
+          <Y>535</Y>
         </Point>
         <Point>
-          <X>519</X>
-          <Y>440</Y>
+          <X>376</X>
+          <Y>535</Y>
         </Point>
       </RoutePoints>
     </Connector>
