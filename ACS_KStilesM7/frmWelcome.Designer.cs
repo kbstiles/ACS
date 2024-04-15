@@ -38,6 +38,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hlpWelcome = new System.Windows.Forms.HelpProvider();
             this.mnsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +124,11 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // hlpWelcome
+            // 
+            this.hlpWelcome.HelpNamespace = "C:\\Users\\KadeS\\source\\repos\\ACS\\Raw\\Module 7\\ACS_KStilesM7\\ACS_KStilesM7\\Help\\Clo" +
+    "thingStore.chm";
+            // 
             // frmWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -162,6 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.HelpProvider hlpWelcome;
     }
 }
 

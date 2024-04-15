@@ -55,6 +55,7 @@
       <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="clsOrderDetails.cs" />
+    <Compile Include="clsReport.cs" />
     <Compile Include="clsSQL.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Welcome Page">
+		<param name="Local" value="HeadingWelcome.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="GoTo/Store">
+			<param name="Local" value="WelcomeTopic1GoToStore.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File/Help">
+			<param name="Local" value="WelcomeTopic2FileHelp.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File/About">
+			<param name="Local" value="WelcomeTopic3FileAbout.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File/Exit">
+			<param name="Local" value="WelcomeTopic4FileExit.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Shop Page">
+		<param name="Local" value="HeadingShop.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Add To Cart">
+			<param name="Local" value="ShopTopic1AddToCart.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cart">
+			<param name="Local" value="ShopTopic2Cart.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Home">
+			<param name="Local" value="ShopTopic3Home.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Cart Page">
+		<param name="Local" value="HeadingCart.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Continue">
+			<param name="Local" value="CartTopic1Continue.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Clear Cart">
+			<param name="Local" value="CartTopic2ClearCart.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Remove">
+			<param name="Local" value="CartTopic3Remove.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Home">
+			<param name="Local" value="ShopTopic3Home.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="About Page">
+		<param name="Local" value="HeadingAbout.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Close">
+			<param name="Local" value="AboutTopic1Close.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
