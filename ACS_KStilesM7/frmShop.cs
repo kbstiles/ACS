@@ -15,9 +15,18 @@ namespace ACS_KStilesM7
 {
     public partial class frmShop : Form
     {
+        public static TypesTableAdapter _taTypes;
+        public static PurchaseDetailsTableAdapter _taPurchases;
         public static ProductsTableAdapter _taProducts;
+        public static OrdersTableAdapter _taOrders;
+        public static CustomersTableAdapter _taCustomers;
+        
 
-        public static ClothingStoreStilesKSP24DataSet _dsProducts;
+        public static ClothingStoreStilesKSP24DataSet _dsTypes,
+            _dsPurchases,
+            _dsProducts,
+            _dsOrders,
+            _dsCustomers;
 
         private static clsOrderDetails Order;
 
@@ -30,17 +39,29 @@ namespace ACS_KStilesM7
 
         private void frmShop_Load(object sender, EventArgs e)
         {
+            _taTypes = typesTableAdapter;
+            _dsTypes = clothingStoreStilesKSP24DataSet;
+
+            _taPurchases = purchaseDetailsTableAdapter;
+            _dsPurchases = clothingStoreStilesKSP24DataSet;
+
             _taProducts = productsTableAdapter;
             _dsProducts = clothingStoreStilesKSP24DataSet;
+
+            _taOrders = ordersTableAdapter;
+            _dsOrders = clothingStoreStilesKSP24DataSet;
+
+            _taCustomers = customersTableAdapter;
+            _dsCustomers = clothingStoreStilesKSP24DataSet;
 
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Types' table. You can move, or remove it, as needed.
             this.typesTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Types);
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.PurchaseDetails' table. You can move, or remove it, as needed.
-            this.purchaseDetailsTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.PurchaseDetails);
+            clsSQL.PurchaseDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Products' table. You can move, or remove it, as needed.
             clsSQL.ProductDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Orders);
+            clsSQL.OrderDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Customers);
 

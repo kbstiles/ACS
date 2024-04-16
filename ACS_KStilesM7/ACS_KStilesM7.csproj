@@ -55,7 +55,7 @@
       <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="clsOrderDetails.cs" />
-    <Compile Include="clsReport.cs" />
+    <Compile Include="clsReports.cs" />
     <Compile Include="clsSQL.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
@@ -100,7 +100,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bhel Puri.ttf" />
     <None Include="ClothingStoreStilesKSP24DataSet.xsc">
       <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
     </None>
@@ -150,7 +149,6 @@
     <Folder Include="bin\Debug\Fonts\" />
     <Folder Include="bin\Debug\Images\" />
     <Folder Include="bin\Release\" />
-    <Folder Include="Properties\Resources\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Resources\Images\blackJacket.jpg" />

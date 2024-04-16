@@ -88,13 +88,13 @@
             this.dgvShop.DataBindings.Add(new System.Windows.Forms.Binding("BackgroundColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainBack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dgvShop.DataMember = "Products";
             this.dgvShop.DataSource = this.clothingStoreStilesKSP24DataSetBindingSource;
-            this.dgvShop.Location = new System.Drawing.Point(48, 22);
+            this.dgvShop.Location = new System.Drawing.Point(48, 21);
             this.dgvShop.Margin = new System.Windows.Forms.Padding(6);
             this.dgvShop.MultiSelect = false;
             this.dgvShop.Name = "dgvShop";
             this.dgvShop.ReadOnly = true;
             this.dgvShop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvShop.Size = new System.Drawing.Size(557, 290);
+            this.dgvShop.Size = new System.Drawing.Size(557, 278);
             this.dgvShop.TabIndex = 4;
             this.dgvShop.TabStop = false;
             this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
@@ -106,7 +106,7 @@
             this.productUPCDataGridViewTextBoxColumn.HeaderText = "ProductUPC";
             this.productUPCDataGridViewTextBoxColumn.Name = "productUPCDataGridViewTextBoxColumn";
             this.productUPCDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productUPCDataGridViewTextBoxColumn.Width = 138;
+            this.productUPCDataGridViewTextBoxColumn.Width = 137;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
@@ -122,7 +122,7 @@
             this.typeIDDataGridViewTextBoxColumn.HeaderText = "TypeID";
             this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
             this.typeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeIDDataGridViewTextBoxColumn.Width = 95;
+            this.typeIDDataGridViewTextBoxColumn.Width = 93;
             // 
             // brandDataGridViewTextBoxColumn
             // 
@@ -138,7 +138,7 @@
             this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
             this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
             this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 71;
+            this.sizeDataGridViewTextBoxColumn.Width = 69;
             // 
             // imageIDDataGridViewTextBoxColumn
             // 
@@ -146,7 +146,7 @@
             this.imageIDDataGridViewTextBoxColumn.HeaderText = "ImageID";
             this.imageIDDataGridViewTextBoxColumn.Name = "imageIDDataGridViewTextBoxColumn";
             this.imageIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imageIDDataGridViewTextBoxColumn.Width = 104;
+            this.imageIDDataGridViewTextBoxColumn.Width = 105;
             // 
             // qtyOnHandDataGridViewTextBoxColumn
             // 
@@ -154,7 +154,7 @@
             this.qtyOnHandDataGridViewTextBoxColumn.HeaderText = "QtyOnHand";
             this.qtyOnHandDataGridViewTextBoxColumn.Name = "qtyOnHandDataGridViewTextBoxColumn";
             this.qtyOnHandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtyOnHandDataGridViewTextBoxColumn.Width = 135;
+            this.qtyOnHandDataGridViewTextBoxColumn.Width = 134;
             // 
             // unitPriceDataGridViewTextBoxColumn
             // 
@@ -162,7 +162,7 @@
             this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
             this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
             this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unitPriceDataGridViewTextBoxColumn.Width = 110;
+            this.unitPriceDataGridViewTextBoxColumn.Width = 112;
             // 
             // clothingStoreStilesKSP24DataSetBindingSource
             // 
@@ -176,10 +176,10 @@
             // 
             // pbxProductImage
             // 
-            this.pbxProductImage.Location = new System.Drawing.Point(662, 24);
+            this.pbxProductImage.Location = new System.Drawing.Point(662, 23);
             this.pbxProductImage.Margin = new System.Windows.Forms.Padding(6);
             this.pbxProductImage.Name = "pbxProductImage";
-            this.pbxProductImage.Size = new System.Drawing.Size(365, 288);
+            this.pbxProductImage.Size = new System.Drawing.Size(365, 276);
             this.pbxProductImage.TabIndex = 1;
             this.pbxProductImage.TabStop = false;
             // 
@@ -190,10 +190,10 @@
             this.btnAddToCart.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "buttonText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.btnAddToCart.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.buttonText;
-            this.btnAddToCart.Location = new System.Drawing.Point(308, 350);
+            this.btnAddToCart.Location = new System.Drawing.Point(308, 335);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(172, 66);
+            this.btnAddToCart.Size = new System.Drawing.Size(172, 63);
             this.btnAddToCart.TabIndex = 1;
             this.btnAddToCart.TabStop = false;
             this.btnAddToCart.Text = "&Add To Cart";
@@ -207,10 +207,10 @@
             this.btnCart.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "buttonText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.btnCart.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.buttonText;
-            this.btnCart.Location = new System.Drawing.Point(515, 350);
+            this.btnCart.Location = new System.Drawing.Point(515, 335);
             this.btnCart.Margin = new System.Windows.Forms.Padding(6);
             this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(172, 66);
+            this.btnCart.Size = new System.Drawing.Size(172, 63);
             this.btnCart.TabIndex = 2;
             this.btnCart.TabStop = false;
             this.btnCart.Text = "&Cart";
@@ -224,10 +224,10 @@
             this.btnHome.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "buttonText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.btnHome.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.buttonText;
-            this.btnHome.Location = new System.Drawing.Point(719, 350);
+            this.btnHome.Location = new System.Drawing.Point(719, 335);
             this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(172, 66);
+            this.btnHome.Size = new System.Drawing.Size(172, 63);
             this.btnHome.TabIndex = 3;
             this.btnHome.TabStop = false;
             this.btnHome.Text = "&Home";
@@ -238,7 +238,7 @@
             // 
             this.cbxQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.cbxQuantity.FormattingEnabled = true;
-            this.cbxQuantity.Location = new System.Drawing.Point(48, 321);
+            this.cbxQuantity.Location = new System.Drawing.Point(48, 308);
             this.cbxQuantity.Name = "cbxQuantity";
             this.cbxQuantity.Size = new System.Drawing.Size(212, 37);
             this.cbxQuantity.TabIndex = 0;
@@ -291,12 +291,12 @@
             // 
             // frmShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::ACS_KStilesM7.Properties.Settings.Default.mainBack;
             this.BackgroundImage = global::ACS_KStilesM7.Properties.Resources.backgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1074, 451);
+            this.ClientSize = new System.Drawing.Size(1074, 432);
             this.Controls.Add(this.cbxQuantity);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnCart);
@@ -304,7 +304,7 @@
             this.Controls.Add(this.pbxProductImage);
             this.Controls.Add(this.dgvShop);
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainBack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);

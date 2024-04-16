@@ -49,7 +49,7 @@ namespace ACS_KStilesM7
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Help.ShowHelp(this, hlpWelcome.HelpNamespace);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

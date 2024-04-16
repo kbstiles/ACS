@@ -15,7 +15,8 @@ namespace ACS_KStilesM7
             totalPerLine;
 
         int quantity,
-            productUPC;
+            productUPC,
+            orderID;
 
         public int GetProductUPC()
         {
@@ -65,6 +66,16 @@ namespace ACS_KStilesM7
         public void SetTotalPerLine(decimal totalPerLine)
         {
             this.totalPerLine = totalPerLine;
+        }
+
+        public int GetOrderID()
+        {
+            return orderID;
+        }
+
+        public void SetOrderID(int orderID)
+        {
+            this.orderID = orderID;
         }
 
         public clsOrderDetails(int productUPC, string productName, decimal unitPrice, int orderQuantity)

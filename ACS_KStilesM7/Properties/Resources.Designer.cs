@@ -71,16 +71,6 @@ namespace ACS_KStilesM7.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Bhel_Puri {
-            get {
-                object obj = ResourceManager.GetObject("Bhel_Puri", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap biegeShirt {

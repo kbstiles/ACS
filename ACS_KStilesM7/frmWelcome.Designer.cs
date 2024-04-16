@@ -46,9 +46,9 @@
             // 
             this.lblWelcomeImage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcomeImage.Image = ((System.Drawing.Image)(resources.GetObject("lblWelcomeImage.Image")));
-            this.lblWelcomeImage.Location = new System.Drawing.Point(20, 61);
+            this.lblWelcomeImage.Location = new System.Drawing.Point(20, 58);
             this.lblWelcomeImage.Name = "lblWelcomeImage";
-            this.lblWelcomeImage.Size = new System.Drawing.Size(187, 135);
+            this.lblWelcomeImage.Size = new System.Drawing.Size(187, 129);
             this.lblWelcomeImage.TabIndex = 2;
             // 
             // lblWelcomeText
@@ -56,10 +56,10 @@
             this.lblWelcomeText.AutoSize = true;
             this.lblWelcomeText.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "secondaryMainText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.lblWelcomeText.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.secondaryMainText;
-            this.lblWelcomeText.Location = new System.Drawing.Point(12, 37);
+            this.lblWelcomeText.Location = new System.Drawing.Point(12, 35);
             this.lblWelcomeText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWelcomeText.Name = "lblWelcomeText";
-            this.lblWelcomeText.Size = new System.Drawing.Size(203, 24);
+            this.lblWelcomeText.Size = new System.Drawing.Size(200, 23);
             this.lblWelcomeText.TabIndex = 1;
             this.lblWelcomeText.Text = "Welcome To My Store!";
             // 
@@ -89,7 +89,7 @@
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
@@ -106,21 +106,21 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // aoutToolStripMenuItem
             // 
             this.aoutToolStripMenuItem.Name = "aoutToolStripMenuItem";
-            this.aoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aoutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aoutToolStripMenuItem.Text = "About";
             this.aoutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -131,17 +131,17 @@
             // 
             // frmWelcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::ACS_KStilesM7.Properties.Settings.Default.mainBack;
             this.BackgroundImage = global::ACS_KStilesM7.Properties.Resources.backgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(226, 207);
+            this.ClientSize = new System.Drawing.Size(226, 198);
             this.Controls.Add(this.lblWelcomeImage);
             this.Controls.Add(this.lblWelcomeText);
             this.Controls.Add(this.mnsMenu);
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainBack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnsMenu;

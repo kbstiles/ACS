@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ACS_KStilesM7
 {
@@ -91,9 +93,15 @@ namespace ACS_KStilesM7
             }            
         }
 
+        public string title, color;
+
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-
+            DateTime today = DateTime.Now;
+            title = "Sondra Carter Receipt: " + today.ToString("yyyy-MM-dd-HHmmss");
+            color = "green";
+            clsReports.PrintReport(clsReports.GenerateReport(title, color));
+            clsReports.GenerateReport(title, color).Clear();
         }
 
         private void lbxCart_MeasureItem(object sender, MeasureItemEventArgs e)
@@ -110,7 +118,8 @@ namespace ACS_KStilesM7
 
         private void frmCart_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //had to reference because was ambiguous
+            System.Windows.Forms.Application.Exit();
         }
 
         public void PopulateData()

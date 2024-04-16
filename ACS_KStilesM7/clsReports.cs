@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace ACS_KStilesM7
 {
-    internal class clsReport
+    internal class clsReports
     {
         private static StringBuilder html = new StringBuilder();
         private static StringBuilder css = new StringBuilder();
 
-        public static StringBuilder GenerateReport(string title, int orderNum, string col, 
-            string productUPC, string productName, string pricePerUnit, string Quantity, string totalPerLine, 
-            string subTotal, string taxAmount, string totalDue)
+        public static StringBuilder GenerateReport(string title, string col)
         {
             css.AppendLine("<styles>");
             css.AppendLine("td {padding: 5px; text-align:center; font-weight:bold;");
@@ -34,20 +33,47 @@ namespace ACS_KStilesM7
 
         public static void ReportDetailsReceipt()
         {
+            int count = 1;
+
             html.AppendLine("<table>");
             html.AppendLine("<tr><td>Order ID</td><td>Product UPC</td><td>Product Name</td><td>Price Per Unit</td><td>Quantity</td><td>Total Per Line</td></tr>");
             html.AppendLine("<tr><td colspan=6><hr/></td></tr>");
             for (int i = 0; i < frmShop.Orders.Count; i++)
             {
-                //first one needs to be order ID,
-                //try using another sql statement in the database
-                //grab MAX OrderID and add it to i ^^^
+                frmShop.Orders[i].SetOrderID(clsSQL.CreateOrderID() + count);
+
+                html.Append("<tr>");
+                html.AppendLine($"<td>{frmShop.Orders[i].GetOrderID()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductUPC()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetUnitPrice()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetQuantity()}</td>");                
                 html.AppendLine($"<td>{frmShop.Orders[i].GetTotalPerLine()}</td>");
+                html.Append("</tr>");
+                html.AppendLine("<tr><td colspan=7><hr/></td></tr>");
+                count++;
+            }
+            html.AppendLine("</table>");
+        }
+
+        public static void PrintReport(StringBuilder html)
+        {
+            try
+            {
+                //DateTime today = DateTime.Now;
+                //using (StreamWriter writer = new StreamWriter($"{today.ToString("yyyy-MM-dd-HHmmss")} - Report.html"))
+                using (StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Report.html"))
+                {
+                    writer.WriteLine(html);
+                }
+                System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Report.html");
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You currently do not have write permissions for this feature.", "Error with System Permissions",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
