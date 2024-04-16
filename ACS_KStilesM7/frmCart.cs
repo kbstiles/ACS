@@ -16,8 +16,7 @@ namespace ACS_KStilesM7
 {
     public partial class frmCart : Form
     {
-        decimal totalPerLine,
-            subTotal,
+        decimal subTotal,
             taxAmount,
             tax,
             totalDue;
@@ -79,6 +78,8 @@ namespace ACS_KStilesM7
             color = "green";
             clsReports.PrintReport(clsReports.GenerateReport(title, color));
             clsReports.GenerateReport(title, color).Clear();
+            this.Hide();
+            new frmShop().Show();
         }
 
         private void lbxCart_MeasureItem(object sender, MeasureItemEventArgs e)

@@ -3430,9 +3430,9 @@ SELECT ProductUPC, ProductName, TypeID, Brand, Size, ImageID, QtyOnHand, UnitPri
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(ClothingStoreStilesKSP24DataSet.ProductsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
+            //if ((this.ClearBeforeFill == true)) {
+            //    dataTable.Clear();
+            //}
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }

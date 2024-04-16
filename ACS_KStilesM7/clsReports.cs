@@ -16,15 +16,16 @@ namespace ACS_KStilesM7
 
         public static StringBuilder GenerateReport(string title, string col)
         {
-            css.AppendLine("<styles>");
-            css.AppendLine("td {padding: 5px; text-align:center; font-weight:bold;");
+            css.AppendLine("<style>");
+            css.AppendLine("td {padding: 5px; text-align:center; font-weight: bold;}");
             css.AppendLine("h1 {color: " + col + ";}");
-            css.AppendLine("</styles>");
+            css.AppendLine("</style>");
 
             html.AppendLine("<html>");
             html.AppendLine($"<head>{css}<title>{title}</title></head>");
             html.AppendLine("<body>");
             html.AppendLine($"<h1>{title}</h1>");
+
 
             ReportDetailsReceipt();
             html.AppendLine("</body></html>");
@@ -36,9 +37,10 @@ namespace ACS_KStilesM7
         {
             int count = 1;
 
+            html.AppendLine("<h2>Order Details:</h2>");
             html.AppendLine("<table>");
             html.AppendLine("<tr><td>Order ID</td><td>Product UPC</td><td>Product Name</td><td>Price Per Unit</td><td>Quantity</td><td>Total Per Line</td></tr>");
-            html.AppendLine("<tr><td colspan=><hr/></td></tr>");
+            html.AppendLine("<tr><td colspan=6><hr/></td></tr>");
             for (int i = 0; i < frmShop.Orders.Count; i++)
             {
                 frmShop.Orders[i].SetOrderID(clsSQL.CreateOrderID() + count);
@@ -47,15 +49,16 @@ namespace ACS_KStilesM7
                 html.AppendLine($"<td>{frmShop.Orders[i].GetOrderID()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductUPC()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");                
-                html.AppendLine($"<td>{frmShop.Orders[i].GetUnitPrice()}</td>");
+                html.AppendLine($"<td>{frmShop.Orders[i].GetUnitPrice().ToString("C", CultureInfo.CurrentCulture)}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetQuantity()}</td>");                
-                html.AppendLine($"<td>{frmShop.Orders[i].GetTotalPerLine()}</td>");
+                html.AppendLine($"<td>{frmShop.Orders[i].GetTotalPerLine().ToString("C", CultureInfo.CurrentCulture)}</td>");
                 html.Append("</tr>");
                 html.AppendLine("<tr><td colspan=6><hr/></td></tr>");
                 count++;
             }
             html.AppendLine("</table>");
 
+            html.AppendLine("<h2>Receipt Details:</h2>");
             html.AppendLine("<table>");
             html.AppendLine("<tr><td>Subtotal</td><td>Tax Amount</td><td>Totale Due</td></tr>");
             html.AppendLine("<tr><td colspan=3><hr/></td></tr>");

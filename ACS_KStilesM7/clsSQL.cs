@@ -176,7 +176,7 @@ namespace ACS_KStilesM7
             {
                 
                 frmShop._taProducts.AddToCart(Quantity, productUPC);
-                frmShop._taProducts.Fill(frmShop._dsProducts.Products);
+                frmShop._taProducts.Update(frmShop._dsProducts.Products);
             }
             catch (SqlException ex)
             {
@@ -205,6 +205,7 @@ namespace ACS_KStilesM7
             {
 
                 frmShop._taProducts.RemovedFromCart(Quantity, productUPC);
+                frmShop._taProducts.Update(frmShop._dsProducts.Products);
             }
             catch (SqlException ex)
             {

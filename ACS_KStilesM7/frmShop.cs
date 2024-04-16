@@ -55,19 +55,23 @@ namespace ACS_KStilesM7
             _dsCustomers = clothingStoreStilesKSP24DataSet;
 
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Types' table. You can move, or remove it, as needed.
-            this.typesTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Types);
-            // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.PurchaseDetails' table. You can move, or remove it, as needed.
-            clsSQL.PurchaseDatabaseCommand();
+            clsSQL.TypesDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Products' table. You can move, or remove it, as needed.
             clsSQL.ProductDatabaseCommand();
-            // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Orders' table. You can move, or remove it, as needed.
-            clsSQL.OrderDatabaseCommand();
             // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.clothingStoreStilesKSP24DataSet.Customers);
+            clsSQL.CustomerDatabaseCommand();
+            // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.Orders' table. You can move, or remove it, as needed.
+            clsSQL.OrderDatabaseCommand();            
+            // TODO: This line of code loads data into the 'clothingStoreStilesKSP24DataSet.PurchaseDetails' table. You can move, or remove it, as needed.
+            clsSQL.PurchaseDatabaseCommand();           
+            
 
             
             MessageBox.Show("Database successfully opened.");
-            
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = _dsProducts.Products;
+            dgvShop.DataSource = bs;
             dgvShop.AutoGenerateColumns = true;
         }        
 
@@ -148,6 +152,11 @@ namespace ACS_KStilesM7
                 pbxProductImage.Image = null;
 
                 clsSQL.AddedToCart(Convert.ToInt32(dgvShop.Rows[dgvShop.CurrentCell.RowIndex].Cells[0].Value), Convert.ToInt32(cbxQuantity.SelectedItem));
+
+                cbxQuantity.SelectedIndex = -1;
+                cbxQuantity.Text = "Quantity On Hand";
+
+                clsSQL.ProductDatabaseCommand();
             }
 
             

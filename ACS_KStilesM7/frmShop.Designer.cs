@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShop));
             this.dgvShop = new System.Windows.Forms.DataGridView();
-            this.productUPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyOnHandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clothingStoreStilesKSP24DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clothingStoreStilesKSP24DataSet = new ACS_KStilesM7.ClothingStoreStilesKSP24DataSet();
             this.pbxProductImage = new System.Windows.Forms.PictureBox();
@@ -71,23 +63,11 @@
             // 
             this.dgvShop.AllowUserToAddRows = false;
             this.dgvShop.AllowUserToDeleteRows = false;
-            this.dgvShop.AutoGenerateColumns = false;
             this.dgvShop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvShop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvShop.BackgroundColor = global::ACS_KStilesM7.Properties.Settings.Default.mainBack;
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productUPCDataGridViewTextBoxColumn,
-            this.productNameDataGridViewTextBoxColumn,
-            this.typeIDDataGridViewTextBoxColumn,
-            this.brandDataGridViewTextBoxColumn,
-            this.sizeDataGridViewTextBoxColumn,
-            this.imageIDDataGridViewTextBoxColumn,
-            this.qtyOnHandDataGridViewTextBoxColumn,
-            this.unitPriceDataGridViewTextBoxColumn});
             this.dgvShop.DataBindings.Add(new System.Windows.Forms.Binding("BackgroundColor", global::ACS_KStilesM7.Properties.Settings.Default, "mainBack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.dgvShop.DataMember = "Products";
-            this.dgvShop.DataSource = this.clothingStoreStilesKSP24DataSetBindingSource;
             this.dgvShop.Location = new System.Drawing.Point(48, 21);
             this.dgvShop.Margin = new System.Windows.Forms.Padding(6);
             this.dgvShop.MultiSelect = false;
@@ -99,70 +79,6 @@
             this.dgvShop.TabStop = false;
             this.dgvShop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShop_CellClick);
             this.dgvShop.SelectionChanged += new System.EventHandler(this.dgvShop_SelectionChanged);
-            // 
-            // productUPCDataGridViewTextBoxColumn
-            // 
-            this.productUPCDataGridViewTextBoxColumn.DataPropertyName = "ProductUPC";
-            this.productUPCDataGridViewTextBoxColumn.HeaderText = "ProductUPC";
-            this.productUPCDataGridViewTextBoxColumn.Name = "productUPCDataGridViewTextBoxColumn";
-            this.productUPCDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productUPCDataGridViewTextBoxColumn.Width = 137;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productNameDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // typeIDDataGridViewTextBoxColumn
-            // 
-            this.typeIDDataGridViewTextBoxColumn.DataPropertyName = "TypeID";
-            this.typeIDDataGridViewTextBoxColumn.HeaderText = "TypeID";
-            this.typeIDDataGridViewTextBoxColumn.Name = "typeIDDataGridViewTextBoxColumn";
-            this.typeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeIDDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // brandDataGridViewTextBoxColumn
-            // 
-            this.brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
-            this.brandDataGridViewTextBoxColumn.HeaderText = "Brand";
-            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
-            this.brandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // imageIDDataGridViewTextBoxColumn
-            // 
-            this.imageIDDataGridViewTextBoxColumn.DataPropertyName = "ImageID";
-            this.imageIDDataGridViewTextBoxColumn.HeaderText = "ImageID";
-            this.imageIDDataGridViewTextBoxColumn.Name = "imageIDDataGridViewTextBoxColumn";
-            this.imageIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imageIDDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // qtyOnHandDataGridViewTextBoxColumn
-            // 
-            this.qtyOnHandDataGridViewTextBoxColumn.DataPropertyName = "QtyOnHand";
-            this.qtyOnHandDataGridViewTextBoxColumn.HeaderText = "QtyOnHand";
-            this.qtyOnHandDataGridViewTextBoxColumn.Name = "qtyOnHandDataGridViewTextBoxColumn";
-            this.qtyOnHandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtyOnHandDataGridViewTextBoxColumn.Width = 134;
-            // 
-            // unitPriceDataGridViewTextBoxColumn
-            // 
-            this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice";
-            this.unitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice";
-            this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
-            this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unitPriceDataGridViewTextBoxColumn.Width = 112;
             // 
             // clothingStoreStilesKSP24DataSetBindingSource
             // 
@@ -343,14 +259,6 @@
         private ClothingStoreStilesKSP24DataSetTableAdapters.PurchaseDetailsTableAdapter purchaseDetailsTableAdapter;
         private System.Windows.Forms.BindingSource typesBindingSource;
         private ClothingStoreStilesKSP24DataSetTableAdapters.TypesTableAdapter typesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productUPCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtyOnHandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unitPriceDataGridViewTextBoxColumn;
         public System.Windows.Forms.BindingSource productsBindingSource;
         public ClothingStoreStilesKSP24DataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         public ClothingStoreStilesKSP24DataSet clothingStoreStilesKSP24DataSet;
