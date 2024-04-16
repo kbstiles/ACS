@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace ACS_KStilesM7
 {
@@ -37,23 +38,32 @@ namespace ACS_KStilesM7
 
             html.AppendLine("<table>");
             html.AppendLine("<tr><td>Order ID</td><td>Product UPC</td><td>Product Name</td><td>Price Per Unit</td><td>Quantity</td><td>Total Per Line</td></tr>");
-            html.AppendLine("<tr><td colspan=6><hr/></td></tr>");
+            html.AppendLine("<tr><td colspan=><hr/></td></tr>");
             for (int i = 0; i < frmShop.Orders.Count; i++)
             {
                 frmShop.Orders[i].SetOrderID(clsSQL.CreateOrderID() + count);
 
                 html.Append("<tr>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetOrderID()}</td>");
-                html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetProductUPC()}</td>");
-                html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");
+                html.AppendLine($"<td>{frmShop.Orders[i].GetProductName()}</td>");                
                 html.AppendLine($"<td>{frmShop.Orders[i].GetUnitPrice()}</td>");
                 html.AppendLine($"<td>{frmShop.Orders[i].GetQuantity()}</td>");                
                 html.AppendLine($"<td>{frmShop.Orders[i].GetTotalPerLine()}</td>");
                 html.Append("</tr>");
-                html.AppendLine("<tr><td colspan=7><hr/></td></tr>");
+                html.AppendLine("<tr><td colspan=6><hr/></td></tr>");
                 count++;
             }
+            html.AppendLine("</table>");
+
+            html.AppendLine("<table>");
+            html.AppendLine("<tr><td>Subtotal</td><td>Tax Amount</td><td>Totale Due</td></tr>");
+            html.AppendLine("<tr><td colspan=3><hr/></td></tr>");
+            html.AppendLine("<tr>");
+            html.AppendLine($"<td>{frmCart.cal.GetSubTotal().ToString("C", CultureInfo.CurrentCulture)}</td>");
+            html.AppendLine($"<td>{frmCart.cal.GetTaxAmount().ToString("C", CultureInfo.CurrentCulture)}</td>");
+            html.AppendLine($"<td>{frmCart.cal.GetTotalDue().ToString("C", CultureInfo.CurrentCulture)}</td>");
+            html.AppendLine("</tr>");
             html.AppendLine("</table>");
         }
 

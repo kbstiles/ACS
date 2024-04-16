@@ -22,35 +22,7 @@ namespace ACS_KStilesM7
             tax,
             totalDue;
 
-        public decimal GetSubTotal()
-        {
-            return subTotal;
-        }
-
-        public void SetSubTotal(decimal subTotal)
-        {
-            this.subTotal = subTotal;
-        }
-
-        public decimal GetTaxAmount()
-        {
-            return taxAmount;
-        }
-
-        public void SetTaxAmount(decimal taxAmount)
-        {
-            this.taxAmount = taxAmount;
-        }
-
-        public decimal GetTotalDue()
-        {
-            return totalDue;
-        }
-
-        public void SetTotalDue(decimal totalDue)
-        {
-            this.totalDue = totalDue;
-        }        
+        public static clsCalculations cal;
 
         public frmCart()
         {
@@ -97,6 +69,11 @@ namespace ACS_KStilesM7
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
+            foreach (clsOrderDetails order in frmShop.Orders)
+            {
+
+            }
+
             DateTime today = DateTime.Now;
             title = "Sondra Carter Receipt: " + today.ToString("yyyy-MM-dd-HHmmss");
             color = "green";
@@ -154,13 +131,11 @@ namespace ACS_KStilesM7
             lbxCart.DrawItem += lbxCart_DrawItem;
 
             lblSubtotalActual.Text = subTotal.ToString("C", CultureInfo.CurrentCulture);
-            SetSubTotal(subTotal);
             taxAmount = subTotal * tax;
             lblTaxActual.Text = taxAmount.ToString("C", CultureInfo.CurrentCulture);
-            SetTaxAmount(taxAmount);
             totalDue = subTotal + taxAmount;
             lblTotalActual.Text = totalDue.ToString("C", CultureInfo.CurrentCulture);
-            SetTotalDue(totalDue);
+            cal = new clsCalculations(subTotal, taxAmount, totalDue);
         }
     }
 }

@@ -286,12 +286,11 @@ namespace ACS_KStilesM7
             }
         }
 
-        public static void CreatePurchase()
+        public static void CreatePurchase(int orderID, int productUPC, int Quantity)
         {
             try
             {
-
-                
+                frmShop._taPurchases.CreatePurchase(orderID, productUPC, Quantity);
             }
             catch (SqlException ex)
             {

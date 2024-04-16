@@ -54,6 +54,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClothingStoreStilesKSP24DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="clsCalculations.cs" />
     <Compile Include="clsOrderDetails.cs" />
     <Compile Include="clsReports.cs" />
     <Compile Include="clsSQL.cs" />
