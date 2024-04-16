@@ -46,7 +46,7 @@
             // 
             this.lblWelcomeImage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblWelcomeImage.Image = ((System.Drawing.Image)(resources.GetObject("lblWelcomeImage.Image")));
-            this.lblWelcomeImage.Location = new System.Drawing.Point(36, 58);
+            this.lblWelcomeImage.Location = new System.Drawing.Point(48, 58);
             this.lblWelcomeImage.Name = "lblWelcomeImage";
             this.lblWelcomeImage.Size = new System.Drawing.Size(187, 129);
             this.lblWelcomeImage.TabIndex = 2;
@@ -56,7 +56,7 @@
             this.lblWelcomeText.AutoSize = true;
             this.lblWelcomeText.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::ACS_KStilesM7.Properties.Settings.Default, "secondaryMainText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.lblWelcomeText.ForeColor = global::ACS_KStilesM7.Properties.Settings.Default.secondaryMainText;
-            this.lblWelcomeText.Location = new System.Drawing.Point(29, 35);
+            this.lblWelcomeText.Location = new System.Drawing.Point(41, 35);
             this.lblWelcomeText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWelcomeText.Name = "lblWelcomeText";
             this.lblWelcomeText.Size = new System.Drawing.Size(200, 23);
@@ -74,7 +74,7 @@
             this.fileToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(258, 24);
+            this.mnsMenu.Size = new System.Drawing.Size(283, 24);
             this.mnsMenu.TabIndex = 3;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -136,7 +136,7 @@
             this.BackColor = global::ACS_KStilesM7.Properties.Settings.Default.mainBack;
             this.BackgroundImage = global::ACS_KStilesM7.Properties.Resources.backgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(258, 204);
+            this.ClientSize = new System.Drawing.Size(283, 202);
             this.Controls.Add(this.lblWelcomeImage);
             this.Controls.Add(this.lblWelcomeText);
             this.Controls.Add(this.mnsMenu);

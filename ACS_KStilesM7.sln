@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACS_KStilesM7", "ACS_KStilesM7\ACS_KStilesM7.csproj", "{32559B99-2268-4C87-BFF1-6D68CDE8A7FF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KadesClothesShop", "KadesClothesShop\KadesClothesShop.vdproj", "{B49C7013-E7EB-4B71-867C-7BC12BD91880}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{32559B99-2268-4C87-BFF1-6D68CDE8A7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32559B99-2268-4C87-BFF1-6D68CDE8A7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32559B99-2268-4C87-BFF1-6D68CDE8A7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49C7013-E7EB-4B71-867C-7BC12BD91880}.Debug|Any CPU.ActiveCfg = Debug
+		{B49C7013-E7EB-4B71-867C-7BC12BD91880}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
